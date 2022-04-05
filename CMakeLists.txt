@@ -9,8 +9,8 @@ find_package(ignition-cmake2 REQUIRED)
 find_package(ignition-math6 REQUIRED)
 
 # Find SDFormat
-find_package(sdformat12 REQUIRED)
-set(SDF_VER ${sdformat12_VERSION_MAJOR})
+find_package(sdformat9 REQUIRED)
+set(SDF_VER ${sdformat9_VERSION_MAJOR})
 
 add_executable(total_mass total_mass.cpp)
 

@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  const sdf::Model * model = root.Model();
+  const sdf::Model * model = root.ModelByIndex(0);
   if (!model){ 
     return -1;
   }
