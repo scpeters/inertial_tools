@@ -9,12 +9,15 @@
 int main(int argc, char *argv[]) {
 
   sdf::Root root;
-  if (!root.Load(argv[1]).empty()) {
-    return -1;
+  auto errors = root.Load(argv[1]);
+  for (const auto &error : errors)
+  {
+    std::cerr << error << std::endl;
   }
 
   const sdf::Model * model = root.ModelByIndex(0);
   if (!model){ 
+    std::cerr << "Unable to load model" << std::endl;
     return -1;
   }
 
